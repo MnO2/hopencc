@@ -1,0 +1,4 @@
+language: haskell
+install:
+    - sudo apt-get install libopencc-dev libopencc1
+    - cabal install
