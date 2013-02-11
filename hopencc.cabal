@@ -4,16 +4,23 @@
 name:                hopencc
 version:             0.1.0.0
 -- synopsis:            
+synopsis:            Haskell binding to libopencc
 -- description:         
-homepage:            https://github.com/MnO2/hopencc
+description:         Haskell binding to libopencc
 license:             BSD3
 license-file:        LICENSE
-author:              MnO2
+author:              Paul Meng
 maintainer:          mno2.csie@gmail.com
 -- copyright:           
 category:            Language
 build-type:          Simple
 cabal-version:       >=1.10
+
+homepage:            https://github.com/MnO2/hopencc
+bug-reports:         https://github.com/MnO2/hopencc/issues
+source-repository    head
+    Type: git
+    Location: git@github.com:MnO2/hopencc.git
 
 library
   default-language:
