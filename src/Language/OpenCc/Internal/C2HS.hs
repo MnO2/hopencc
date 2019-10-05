@@ -119,7 +119,7 @@ cToEnum = toEnum . cIntConv
 cFromEnum :: (Enum e, Integral i) => e -> i
 cFromEnum = cIntConv . fromEnum
 
-combineBitMasks :: (Enum a, Bits b) => [a] -> b
+combineBitMasks :: (Enum a, Bits b, Num b) => [a] -> b
 combineBitMasks = foldl (.|.) 0 . map (fromIntegral . fromEnum)
 
 nullable :: (Ptr a -> b) -> Ptr a -> Maybe b
@@ -143,7 +143,7 @@ withUTF8CString = GHC.withCString utf8
 withUTF8CStringLen :: String -> (CStringLen -> IO a) -> IO a
 withUTF8CStringLen = GHC.withCStringLen utf8
 
-withUTF8CStringLen' :: String -> ((Ptr CChar, CUInt) -> IO a) -> IO a
+withUTF8CStringLen' :: String -> ((Ptr CChar, CULong) -> IO a) -> IO a
 withUTF8CStringLen' s f = GHC.withCStringLen utf8 s (\(c, l) -> f (c, fromIntegral l))
 #else
 nul :: CChar

@@ -9,13 +9,11 @@
 module Language.OpenCc.Internal.OpenCc where
 
 #if __GLASGOW_HASKELL__ >= 702
-import Foreign.Safe
+import Foreign
 #else
 import Foreign
 #endif
-import Foreign.C
 
-import GHC.Word
 import Language.OpenCc.Internal.C2HS
 
 #include <opencc/opencc.h>
