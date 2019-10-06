@@ -2,6 +2,8 @@ language: haskell
 cabal: "2.4"
 ghc:
   - "8.6.4"
+before_install:
+    - export PATH="$HOME"/.cabal/bin:$PATH
 install:
     - sudo apt-get install libopencc-dev libopencc1
     - cabal install --only-dependencies --enable-tests
