@@ -5,6 +5,5 @@ ghc:
 before_install:
     - export PATH="$HOME"/.cabal/bin:$PATH
 install:
-    - sudo apt-get install libopencc-dev libopencc1
-    - cabal install c2hs happy
+    - sudo apt-get install libopencc-dev libopencc1 happy c2hs
     - cabal install --only-dependencies --enable-tests
