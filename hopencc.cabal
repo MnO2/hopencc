@@ -3,17 +3,15 @@
 
 name:                hopencc
 version:             0.2.0.0
--- synopsis:            
 synopsis:            Haskell binding to libopencc
--- description:         
-description:         Haskell binding to libopencc
+description:         opencc is the library for Simplified and Tranditional Chinese conversion. And this library is a binding for Haskell 
 license:             BSD3
 license-file:        LICENSE
 author:              Paul Meng
--- copyright:           
 category:            Language
 build-type:          Simple
 cabal-version:       >=1.10
+maintainer:          me@paulme.ng
 
 homepage:            https://github.com/MnO2/hopencc
 bug-reports:         https://github.com/MnO2/hopencc/issues
@@ -37,7 +35,7 @@ library
     Language.OpenCc.Internal.C2HS
     Language.OpenCc.Internal.OpenCc
   build-depends:       
-    base,
+    base >= 4.5 && < 5,
     utf8-string,
     bytestring   
   pkgconfig-depends:
